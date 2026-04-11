@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "467349579093",
+    "project_id": "golang-firebase-dae7e",
+    "storage_bucket": "golang-firebase-dae7e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467349579093:android:fa13b0456fab31dd973bdc",
+        "android_client_info": {
+          "package_name": "com.example.apps_marketplace_integration_backend"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8tmb4lI07Lv72IwYfmKHR1s6L6pGu1mc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467349579093:android:ce9824c819a3f903973bdc",
+        "android_client_info": {
+          "package_name": "golag.firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8tmb4lI07Lv72IwYfmKHR1s6L6pGu1mc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
