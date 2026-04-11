@@ -39,7 +39,7 @@ dependencies:
   # Firebase dependencies
   firebase_core: ^4.6.0
   firebase_auth: ^6.3.0
-  google_sign_in: ^7.2.0
+  google_sign_in: ^6.2.0
   # HTTP client
   dio: ^5.9.2
   # Secure storage for sensitive data

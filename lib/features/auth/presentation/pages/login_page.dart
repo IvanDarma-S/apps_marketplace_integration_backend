@@ -1,10 +1,10 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:apps_marketplace_integration_backend/features/auth/presentation/widgets/auth_header.dart';
 import 'package:apps_marketplace_integration_backend/features/auth/presentation/widgets/custom_button.dart';
 import 'package:apps_marketplace_integration_backend/features/auth/presentation/widgets/google_sign_in_button.dart';
 import 'package:apps_marketplace_integration_backend/features/auth/presentation/widgets/divider_with_text.dart';
 import 'package:apps_marketplace_integration_backend/features/auth/presentation/widgets/loading_overlay.dart';
+import 'package:apps_marketplace_integration_backend/features/auth/presentation/providers/auth_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

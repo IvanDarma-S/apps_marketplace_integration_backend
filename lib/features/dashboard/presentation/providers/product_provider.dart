@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:apps_marketplace_integration_backend/core/network/dio_client.dart';
-import 'package:apps_marketplace_integration_backend/core/utils/api_constants.dart';
-import 'package:apps_marketplace_integration_backend/features/dashboard/domain/models/product_model.dart';
+import 'package:apps_marketplace_integration_backend/core/services/dio_client.dart';
+import 'package:apps_marketplace_integration_backend/core/constants/api_constants.dart';
+import 'package:apps_marketplace_integration_backend/features/dashboard/data/models/product_model.dart';
 
 enum ProductStatus { initial, loading, loaded, error }
 

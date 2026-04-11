@@ -1,8 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:apps_marketplace_integration_backend/core/network/dio_client.dart';
-import 'package:apps_marketplace_integration_backend/core/services/secure_storage_service.dart';
+import 'package:apps_marketplace_integration_backend/core/services/dio_client.dart';
+import 'package:apps_marketplace_integration_backend/core/services/secure_storage.dart';
+import 'package:apps_marketplace_integration_backend/core/constants/api_constants.dart';
 
 enum AuthStatus {
   initial, // Belum ada action
@@ -22,6 +23,9 @@ class AuthProvider extends ChangeNotifier {
   User? _firebaseUser;
   String? _backendToken; // Token dari backend (bukan Firebase token)
   String? _errorMessage;
+  // WAJIB DITAMBAHKAN: Karena kamu memanggilnya di register() dan loginAfterEmailVerification()
+  String? _tempEmail;
+  String? _tempPassword;
 
   // ─── Getters ─────────────────────────────────────────────
   AuthStatus get status => _status;
