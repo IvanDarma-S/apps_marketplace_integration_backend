@@ -1,8 +1,12 @@
+import 'package:dio/dio.dart';
+import 'package:apps_marketplace_integration_backend/core/constants/api_constants.dart';
+import 'package:apps_marketplace_integration_backend/core/services/secure_storage.dart';
+
 class DioClient {
   static Dio? _instance;
 
   static Dio get instance {
-    _instance ??= _createDio(); // Singleton pattern
+    _instance ??= _createDio();
     return _instance!;
   }
 
@@ -12,32 +16,9 @@ class DioClient {
         baseUrl: ApiConstants.baseUrl,
         connectTimeout: Duration(milliseconds: ApiConstants.connectTimeout),
         receiveTimeout: Duration(milliseconds: ApiConstants.receiveTimeout),
-        headers: {'Content-Type': 'application/json'},
       ),
     );
 
-    // Interceptor 1: Logging
-    dio.interceptors.add(
-      InterceptorsWrapper(
-        onRequest: (options, handler) async {
-          debugPrint('[REQUEST] ${options.method} ${options.path}');
-          handler.next(options);
-        },
-        onResponse: (response, handler) {
-          debugPrint('[RESPONSE] ${response.statusCode}');
-          handler.next(response);
-        },
-        onError: (error, handler) async {
-          debugPrint('[ERROR] ${error.response?.statusCode}');
-          if (error.response?.statusCode == 401) {
-            await SecureStorageService.clearAll(); // Auto logout
-          }
-          handler.next(error);
-        },
-      ),
-    );
-
-    // Interceptor 2: Auto-inject Bearer Token
     dio.interceptors.add(
       InterceptorsWrapper(
         onRequest: (options, handler) async {

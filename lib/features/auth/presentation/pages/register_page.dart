@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
   @override
@@ -89,8 +91,9 @@ class _RegisterPageState extends State<RegisterPage> {
                     prefixIcon: const Icon(Icons.email_outlined),
                     validator: (v) {
                       if (v?.isEmpty ?? true) return 'Email wajib diisi';
-                      if (!EmailValidator.validate(v!))
+                      if (!EmailValidator.validate(v!)) {
                         return 'Format email salah';
+                      }
                       return null;
                     },
                   ),
