@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:apps_marketplace_integration_backend/core/constants/api_colors.dart';
+import 'package:apps_marketplace_integration_backend/main.dart';
 import 'package:apps_marketplace_integration_backend/features/auth/presentation/pages/login_page.dart';
 import 'package:apps_marketplace_integration_backend/features/auth/presentation/pages/register_page.dart';
 import 'package:apps_marketplace_integration_backend/features/auth/presentation/pages/verify_email_page.dart';
