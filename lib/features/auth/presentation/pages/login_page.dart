@@ -125,7 +125,7 @@ class _LoginPageState extends State<LoginPage> {
                   const SizedBox(height: 32),
                   CustomTextField(
                     label: 'Email',
-                    hint: 'contoh@email.com',
+                    hint: 'masukkan email anda',
                     controller: _emailCtrl,
                     keyboardType: TextInputType.emailAddress,
                     prefixIcon: const Icon(Icons.email_outlined),
