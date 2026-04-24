@@ -40,6 +40,20 @@ Aplikasi ini menggunakan **Golang** sebagai mesin _backend_ untuk mengelola tran
 
 ---
 
+## Cara Menjalankan Aplikasi
+
+Buka terminal pada root direktori proyek Flutter (lokasi file `pubspec.yaml`), kemudian jalankan perintah berikut secara berurutan:
+
+```bash
+# 1. Install semua dependensi
+flutter pub get
+
+# 2. Pastikan emulator/device sudah terhubung, lalu jalankan aplikasi
+flutter run
+```
+
+---
+
 ## 📁 Struktur Arsitektur Proyek
 
 Struktur folder diatur sedemikian rupa untuk mengikuti prinsip _Separation of Concerns_:
